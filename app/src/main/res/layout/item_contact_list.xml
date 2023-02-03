@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:layout_margin="10dp"
+    android:id="@+id/userCard"
+    app:cardBackgroundColor="@color/gray_white"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <androidx.cardview.widget.CardView
+                android:id="@+id/profileCV"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="50dp"
+                android:layout_marginLeft="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent">
+                <ImageView
+                    android:id="@+id/userImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/img_profile"
+                    android:scaleType="fitXY"/>
+            </androidx.cardview.widget.CardView>
+            <TextView
+                android:id="@+id/userName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="A. Malek Fahad"
+                android:textColor="@color/dark"
+                android:textStyle="bold"
+                android:textAppearance="@style/TextAppearance.Material3.BodyLarge"
+                app:layout_constraintStart_toEndOf="@id/profileCV"
+                app:layout_constraintTop_toTopOf="@id/profileCV"
+                app:layout_constraintBottom_toTopOf="@id/userName"
+                android:layout_marginLeft="20dp"/>
+            <TextView
+                android:id="@+id/userType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Friends"
+                android:textColor="@color/white"
+                android:background="@drawable/bg_user_type"
+                android:textAppearance="@style/TextAppearance.Material3.BodySmall"
+                app:layout_constraintStart_toEndOf="@id/userName"
+                app:layout_constraintTop_toTopOf="@id/userName"
+                app:layout_constraintBottom_toBottomOf="@id/userName"
+                android:layout_marginLeft="5dp"/>
+            <TextView
+                android:id="@+id/userPnone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+880 1777-917801"
+                android:textColor="@color/gray"
+                android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
+                app:layout_constraintStart_toEndOf="@id/profileCV"
+                app:layout_constraintTop_toBottomOf="@id/userName"
+                app:layout_constraintBottom_toBottomOf="@id/profileCV"
+                android:layout_marginLeft="20dp"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/userFavourite"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/ic_favourite"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginRight="20dp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

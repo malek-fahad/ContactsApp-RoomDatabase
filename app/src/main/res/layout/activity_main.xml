@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <View
+        android:id="@+id/topBarView"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/bg_add_contact_card"
+        android:elevation="2dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <EditText
+        android:id="@+id/searchInput"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:elevation="2dp"
+        android:hint="Search"
+        android:textColorHint="@color/gray"
+        android:textColor="@color/dark"
+        android:drawableLeft="@drawable/ic_search"
+        android:drawablePadding="10dp"
+        android:background="@drawable/bg_search_input"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/addContactBtn"
+        app:layout_constraintTop_toTopOf="@id/topBarView"
+        app:layout_constraintBottom_toBottomOf="@id/topBarView"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="10dp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/addContactBtn"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/ic_plus"
+        app:layout_constraintStart_toEndOf="@id/searchInput"
+        app:layout_constraintTop_toTopOf="@id/topBarView"
+        app:layout_constraintBottom_toBottomOf="@id/topBarView"
+        app:layout_constraintEnd_toStartOf="@id/optionBtn"
+        android:layout_marginRight="10dp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/optionBtn"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/ic_dot_option"
+        app:layout_constraintStart_toEndOf="@id/addContactBtn"
+        app:layout_constraintTop_toTopOf="@id/topBarView"
+        app:layout_constraintBottom_toBottomOf="@id/topBarView"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginRight="20dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+    android:id="@+id/contactListRV"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+    tools:listitem="@layout/item_contact_list"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/topBarView"
+    app:layout_constraintBottom_toBottomOf="parent"/>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/addNewContactBtn"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/ic_add_contact"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintVertical_bias="1.0"
+        android:layout_margin="20dp"/>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
